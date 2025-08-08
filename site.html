@@ -25,15 +25,16 @@
         
 
     }
+
 /* hv is for hover */
      :hover#homehv { 
-        color: midnightblue;
+        color: lightcoral;
      }
      :hover#loginhv{
-        color: midnightblue;
+        color: lightcoral;
      }
      :hover#logouthv{
-        color: midnightblue;
+        color: lightcoral;
      } 
      #navlink a {
          font-size: larger;
@@ -85,9 +86,30 @@
     footer{
         text-align: center;
         justify-content: space-between;
-        padding: 15px ;
-         
+        padding: 15px;
+    
      }
+     .cartlogo {
+         font-size: 35px;
+         cursor: pointer;
+         text-align: right;
+         padding-top: 20px;
+    }  
+    header span {
+        background-color: red;
+
+    }
+     #cart-count{
+            background-color:red;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            right: 20px;
+            padding: 2px 5px;
+    }
 </style>
 
 <body>
@@ -98,10 +120,12 @@
         <a id="homehv" href="#">Home</a>
         <a id="loginhv" href="#">Login</a>
         <a id="logouthv" href="#">LogOut</a>
+        <div class="cartlogo">&#128722;</div> <!-- 🛒 -->
+        <span id="cart-count">0</span>
      </div>
 </header>
-
 <main>
+      
      <h2>Our Products</h2>
      <br>
 
@@ -110,24 +134,26 @@
             <th>Product</th>
             <th>Product Image</th>
             <th>Price</th>
-            <th>Buy</th>
+            <th>To Your Cart</th>
          </tr>
          <tr>
             <td> Bgmi T-shirt</td>
             <td> <img src="download (3).jpeg" alt=" BGMI T-Shirt"> </td>
             <td>599/-</td>
-            <td> <button class="button1" > Buy </button></td>
+            <td> <button class="button1">  Cart </button></td>
          </tr>
          <tr>
             <td> COC T-shirt </td>
             <td> <img src="download (1).jpeg" alt=" COC T-Shirt "> </td>
             <td>499/-</td>
-            <td> <button class="button1" > Buy </button></td>
+            <td> <button class="button1">  Cart </button></td>
          </tr>
+         <tr>
             <td> MINECRAFT T-shirt</td>
             <td> <img src="download (2).jpeg" alt=" MINECRAFT T-Shirt "> </td>
             <td>699/-</td>
-            <td> <button class="button1" > Buy </button></td>
+            <td> <button class="button1">  Cart </button></td>
+         </tr>
      </table>
 </main>
 <footer>
