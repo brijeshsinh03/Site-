@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Shopping Site</title>
 </head>
-<style>
+
+<style>   
     body{
         margin: 0px;
         padding: 0px;
         font-family: 'Times New Roman', Times, serif;
     }
-    h1{
+    h1{ 
         margin: 0px;
 
     }
@@ -44,7 +45,8 @@
     }
     h2{
       font-size: xx-large;  
-     text-decoration: underline;
+      text-decoration: underline;
+      
 
     }
 
@@ -55,6 +57,8 @@
         background-color: greenyellow;
         width: 50px;
         height: 30px;
+        font-weight: bold;
+        font-size: 15px;
     }
     .button2{
         width: 100px;
@@ -109,59 +113,11 @@
             position: absolute;
             right: 20px;
             padding: 2px 5px;
+            font-size: large;
     }
-    .cart-sidebar {
-    position: fixed;
-    right: -400px;
-    top: 0;
-    width: 350px;
-    height: 100%;
-    background: white;
-    border-left: 2px solid black;
-    padding: 15px;
-    box-shadow: -3px 0px 5px rgba(0,0,0,0.3);
-    overflow-y: auto;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-    }
-    .cart-sidebar.open {
-    right: 0;
-}
-.cart-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
-.cart-item img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
-.cart-item-details {
-    flex: 1;
-    margin-left: 10px;
-}
-.quantity-control {
-    display: flex;
-    align-items: center;
-}
-.quantity-control button {
-    background-color: lightgray;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-}
-.close-cart {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    float: right;
-}
+   
 
+    
 </style>
 
 <body>
@@ -172,9 +128,9 @@
         <a id="homehv" href="#">Home</a>
         <a id="loginhv" href="#">Login</a>
         <a id="logouthv" href="#">LogOut</a>
-        <div class="cartlogo">&#128722;</div> <!-- 🛒 -->
-
+        <div class="cartlogo">&#128722; 
         <span id="cart-count">0</span>
+        </div>
      </div>
 </header>
 <main>
@@ -191,27 +147,29 @@
          </tr>
          <tr>
             <td> Bgmi T-shirt</td>
-            <td> <img src="download (3).jpeg" data -=" BGMI T-Shirt"> </td>
+            <td> <img src="download (3).jpeg" data-name=" BGMI T-Shirt" class="productimg"> </td>
             <td>599/-</td>
             <td> <button class="button1">  Cart </button></td>
          </tr>
          <tr>
             <td> COC T-shirt </td>
-            <td> <img src="download (1).jpeg" data-=" COC T-Shirt "> </td>
+            <td> <img src="download (1).jpeg" data-name=" COC T-Shirt "  class="productimg" > </td>
             <td>499/-</td>
             <td> <button class="button1">  Cart </button></td>
          </tr>
          <tr>
             <td> MINECRAFT T-shirt</td>
-            <td> <img src="download (2).jpeg" data-=" MINECRAFT T-Shirt "> </td>
+            <td> <img src="download (2).jpeg" data-name=" MINECRAFT T-Shirt "  class="productimg" > </td>
             <td>699/-</td>
             <td> <button class="button1">  Cart </button></td>
          </tr>
      </table>
 </main>
-<footer>
-     <button class="button2"> Contact </button>
-     <button class="button2"> Feedback </button>
+<footer> 
+    <a href="contactpage.html" >
+    <button  class="button2"> Contact </button>
+    </a>
+    <button  class="button2"> Feedback </button>
      <button class="button2"> Our Policy</button> 
 </footer>
 <script>
@@ -232,6 +190,5 @@
         });
     });
 </script>
-
 </body>
 </html>
