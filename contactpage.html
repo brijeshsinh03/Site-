@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Contact Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body { 
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        form {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 380px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            color: rgb(218, 223, 223);
+            transition: .5s;
+            background: #111;
+            padding: 0 5px;
+        }
+
+        .container input,
+        .container textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1.2px solid rgb(220, 223, 223);
+            background: transparent;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .container input:focus~label,
+        .container input:valid~label,
+        .container textarea:focus~label,
+        .container textarea:valid~label {
+            top: -10px;
+            font-size: 14px;
+            color: #0ff;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            background: #0ff;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #09c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Contact Us</h1>
+
+        <div class="container">
+            <input type="text" id="Fname" required>
+            <label for="Fname">First Name</label>
+        </div>
+
+        <div class="container">
+            <input type="text" id="Lname" required>
+            <label for="Lname">Last Name</label>
+        </div>
+
+        <div class="container">
+            <input type="tel" id="Phone" required>
+            <label for="Phone">Phone Number</label>
+        </div>
+
+        <div class="container">
+            <input type="email" id="Email" required>
+            <label for="Email">Email</label>
+        </div>
+
+        <div class="container">
+            <textarea id="Comment" required></textarea>
+            <label for="Comment">Comment</label>
+        </div>
+
+        <input type="submit" value="SEND MESSAGE">
+    </form>
+</body>
+</html> 
