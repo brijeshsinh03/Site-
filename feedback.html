@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .rating {
+  direction: rtl; /* makes clicking left to right easier */
+  unicode-bidi: bidi-override;
+  display: inline-block;
+}
+.rating input {
+  display: none; /* hide radio buttons */
+}
+.rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+.rating input:checked ~ label {
+  color: gold;
+}
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
+}
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+body{
+     font-size: large;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     padding-top: 300px;
+     text-align: center;
+     background-color: cornflowerblue;
+}
+h1{
+  margin-bottom: 10px;
+}
+textarea{
+  height: 108px;
+  width: 332px;
+  border-radius:8px;
+  resize: none;
+}
+.submit{
+  font-weight: bold;
+  width: 170px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+</style>
+
+<body>
+    <div>
+      <form>
+      <h1>
+        We Value Your Opinion
+        </h1>
+    </div><br>
+    <div>
+        <span>
+            How Would You rate your overall Experience?
+        </span><br>
+    <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5">
+         <label for="star5">★</label>
+         <input type="radio" id="star4" name="rating" value="4">
+         <label for="star4">★</label>
+         <input type="radio" id="star3" name="rating" value="3">
+         <label for="star3">★</label>
+         <input type="radio" id="star2" name="rating" value="2">
+         <label for="star2">★</label>
+         <input type="radio" id="star1" name="rating" value="1">
+         <label for="star1">★</label>
+    </div>
+    </div><br>
+    <div>
+        <h5>Kindly take a Moment to tell us What you think :) </h5><br>
+        <textarea></textarea>
+    </div><br>
+    <div>
+        <input class="submit" type="submit" value="Share My Feedback">
+    </div>
+  </form>
+</body>
+</html>
